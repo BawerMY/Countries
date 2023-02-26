@@ -4,6 +4,6 @@ https://bawermy.github.io/Countries/
 
 
 
-Built uyact.js and tailwindcss
+Built using React.js and tailwindcss
 
 (frontend mentor design)(powered by RESTcountries)
