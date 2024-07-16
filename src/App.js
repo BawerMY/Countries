@@ -109,26 +109,26 @@ function App() {
               setFilter(null)
             }} className='max-w-[30rem] w-[calc(100vw-152px)] outline-none bg-transparent' type="text" placeholder='Search for a country...' />
           </label>
-          <button id='filter-button' onClick={() => setSelect(!select)} className={'flex rounded-lg relative gap-8 px-8 py-5 items-center shadow-md'+(dark?' bg-[#2b3945]':' bg-white')}>
-            <span className='first-letter:uppercase'>{filter?filter:"filter by Region"}</span>
-            <div className='w-4'>
-              <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512"><title>Chevron Down</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"/></svg>
-            </div>
-            {select&&<div className={'w-['+optionsLength+'px] absolute left-0 top-[68px] flex flex-col rounded-lg shadow-md'+(dark?' bg-[#2b3945]':' bg-white')}>
-              {filter?
-                <>
-                  <button onClick={() => {setFilter(null); filterUp=null}} className='text-left rounded-t-lg px-8 pb-1 pt-4'>Null</button>
-                  <button onClick={() => {setFilter("africa"); filterUp="africa"}} className='text-left px-8 py-1'>Africa</button>
-                </>
-              :
-                <button onClick={() => {setFilter("africa"); filterUp="africa"}} className='text-left rounded-t-lg px-8 pb-1 pt-4'>Africa</button>
-              }
-              <button onClick={() => {setFilter("america"); filterUp="america"}} className='text-left px-8 py-1'>America</button>
-              <button onClick={() => {setFilter("asia"); filterUp="asia"}} className='text-left px-8 py-1'>Asia</button>
-              <button onClick={() => {setFilter("europe"); filterUp="europe"}} className='text-left px-8 py-1'>Europa</button>
-              <button onClick={() => {setFilter("oceania"); filterUp="oceania";}} className='text-left rounded-b-lg px-8 pt-1 pb-4'>Oceania</button>
-            </div>}
-          </button>
+          // <button id='filter-button' onClick={() => setSelect(!select)} className={'flex rounded-lg relative gap-8 px-8 py-5 items-center shadow-md'+(dark?' bg-[#2b3945]':' bg-white')}>
+          //   <span className='first-letter:uppercase'>{filter?filter:"filter by Region"}</span>
+          //   <div className='w-4'>
+          //     <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512"><title>Chevron Down</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"/></svg>
+          //   </div>
+          //   {select&&<div className={'w-['+optionsLength+'px] absolute left-0 top-[68px] flex flex-col rounded-lg shadow-md'+(dark?' bg-[#2b3945]':' bg-white')}>
+          //     {filter?
+          //       <>
+          //         <button onClick={() => {setFilter(null); filterUp=null}} className='text-left rounded-t-lg px-8 pb-1 pt-4'>Null</button>
+          //         <button onClick={() => {setFilter("africa"); filterUp="africa"}} className='text-left px-8 py-1'>Africa</button>
+          //       </>
+          //     :
+          //       <button onClick={() => {setFilter("africa"); filterUp="africa"}} className='text-left rounded-t-lg px-8 pb-1 pt-4'>Africa</button>
+          //     }
+          //     <button onClick={() => {setFilter("america"); filterUp="america"}} className='text-left px-8 py-1'>America</button>
+          //     <button onClick={() => {setFilter("asia"); filterUp="asia"}} className='text-left px-8 py-1'>Asia</button>
+          //     <button onClick={() => {setFilter("europe"); filterUp="europe"}} className='text-left px-8 py-1'>Europa</button>
+          //     <button onClick={() => {setFilter("oceania"); filterUp="oceania";}} className='text-left rounded-b-lg px-8 pt-1 pb-4'>Oceania</button>
+          //   </div>}
+          // </button>
         </div>
         <div className='grid sm:grid-cols-2 min-[1066px]:grid-cols-3 min-[1440px]:grid-cols-4 min-[3800px]:grid-cols-6 min-[2900px]:grid-cols-5 max-[800px]:gap-12 max-sm:mx-6 max-sm:gap-12 gap-[6rem]'>
           {countries&&countries.map((country) => <Card key={country.name.common} data={country} />)}
